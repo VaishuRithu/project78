@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Project78</title>
+    </head>
+    <body>
+        <center>
+            <h1>My Family Book</h1>
+            <br>
+            <img id="img" width="300px" height="300px" src="FamilyOpeningimg.jpg">
+            <br>
+            <br>
+            <p id="name">My Family</p>
+            <br>
+            <br>
+            <button onclick="nextslide()" id="nextbutton" width="10px" height="20px">Next</button>
+        </center>
+        <script>
+
+           var images = ["FamilyOpeningimg.jpg","dadimg.jpg","momimg.jpg","sisimg.jpeg"];
+           var names = ["My Family","Muthusamy","Hemamalini","Rithika"];
+           var i = 1;
+           var a = 1;
+           function nextslide(){
+                if(a==4) {
+                    a=0; i=0;
+                }
+                document.getElementById("name").innerHTML = names[a];
+                a++;
+                document.getElementById("img").src = images[i];
+                i++;
+           }
+
+        </script>
+    </body>
+</html>
